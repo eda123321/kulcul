@@ -1,0 +1,279 @@
+    
+
+<div class="form">
+    <div class="menu">
+        <ul id="fllmenu">
+            <a href="http://127.0.0.1:5500/Index.html#Калькулятор/index144.html" class="underline-one1">84</a>
+            <a href="http://127.0.0.1:5500/Index144.html#Калькулятор/index144.html" class="underline-one">144</a>
+            <a href="http://127.0.0.1:5500/Index234.html" class="underline-one">234</a>
+
+
+        </ul>
+    </div>
+
+    <div class="title">Привет!</div>
+    <div class="subtitle">Это калькулятор палетов</div>
+    <div class="input-container ic1">
+    <input id="num1" class="input" type="text" placeholder=" " />
+    <div class="cut"></div>
+    <label for="" class="placeholder">Колличество коробок</label>
+    </div>
+    
+
+
+
+    <div class="fl">
+        <ul id="fl">
+            <li><p id="result">0</p></li>
+            <li><p id="result2">0</p></li>
+        </ul>
+    
+    
+    </div>
+    <div class="fll">
+        <ul id="fll">
+            <p>Палеты</p>
+            <p>Коробки</p>
+        </ul>
+    
+    
+    </div>
+
+    
+    
+    <button onclick="func(),func1()" class="submit">Рассчитать</button>
+
+    <div class="razrab">
+        <p>Разработал:</p>
+        <p>Гахраманов Анар Э.</p>
+    
+</div>
+
+
+
+    <script>
+    function func(){
+    var num1 = Number(document.getElementById("num1").value);
+    var result = ( Math.floor(num1 / 84));
+    
+    document.getElementById("result").innerHTML = result;
+    }
+    
+    function func1(){
+    var num1 = Number(document.getElementById("num1").value);
+    var result2 = ((num1) - ( Math.floor(num1 / 84) * 84));
+    
+    document.getElementById("result2").innerHTML = result2;
+    }
+    
+
+    
+    </script>
+
+<style>
+    a { color:green;  }
+a:hover { color:rgb(12, 211, 85); }
+
+    .underline-one {
+     margin-top: 12px;
+     font-family: sans-serif;
+     color: #08d;
+     text-decoration: none;
+
+}
+
+    .underline-one1 {
+        margin-top: 12px;
+     font-family: sans-serif;
+     color: rgb(12, 211, 85);
+     text-decoration: none;
+
+}
+
+    menu {
+        flex: 0 0 130px;
+  background-color: #303245;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: sans-serif;
+    }
+    
+    #fllmenu {
+        display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    color: #cfd4da82;
+    padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #303245;
+    border-radius: 10px;
+    height: 45px;
+
+    }
+
+    #fl {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    color: #cfd4da82;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+    #fll {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    color: #cfd4da82;
+    padding: 0;
+    margin: -36px;
+    font-family: sans-serif;
+    
+}
+
+    li {
+  flex: 0 0 130px;
+  background-color: #303245;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.razrab {
+    color: #cfd4da82;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 24;
+    font-family: sans-serif;
+}
+
+    body {
+    align-items: center;
+    background-color: #d5d5d5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 545px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 140px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: #65657b;
+  }
+
+
+  .submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+   outline: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 70px;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+</style>
